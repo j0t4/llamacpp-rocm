@@ -1189,6 +1189,7 @@ jobs:
     - name: Generate release tag
       id: generate-tag
       env:
+        GH_TOKEN: ${{ github.token }}
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         # Get all existing release tags that match the pattern b####
