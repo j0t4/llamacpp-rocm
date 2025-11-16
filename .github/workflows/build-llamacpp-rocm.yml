@@ -1,4 +1,4 @@
-name: Build Llama.cpp + ROCm
+name: BuildOld Llama.cpp + ROCm
 on:
   workflow_dispatch:
     inputs:
