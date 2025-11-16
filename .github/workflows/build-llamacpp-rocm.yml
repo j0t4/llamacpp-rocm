@@ -29,7 +29,7 @@ on:
     types: [opened, synchronize, reopened]
 
   # Trigger on a schedule to build nightly releases
-  schedule:
+  # schedule:
     # Runs at 1:00 PM UTC, which is 5:00 AM PST (UTC-8)
     # This is two hours after the ROCm nightly tarball is triggered
     # - cron: '0 13 * * *'
