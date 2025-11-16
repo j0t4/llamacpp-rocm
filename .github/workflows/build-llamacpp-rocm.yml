@@ -39,6 +39,7 @@ env:
   GFX_TARGETS: ${{ github.event.inputs.gfx_target || 'gfx1151,gfx120X,gfx110X' }}
   ROCM_VERSION: ${{ github.event.inputs.rocm_version || 'latest' }}
   LLAMACPP_VERSION: ${{ github.event.inputs.llamacpp_version || 'latest' }}
+  GH_TOKEN: {{ secrets.AGENT_TOKEN }}
 
 jobs:
   prepare-matrix:
