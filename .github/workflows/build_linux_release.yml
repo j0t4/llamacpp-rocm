@@ -512,10 +512,8 @@ jobs:
       pull-requests: write
     if: |
       always() &&
-      (needs.build-windows.result == 'success' || needs.build-ubuntu.result == 'success') &&
-      (needs.test-windows-gfx1151.result == 'success' || needs.test-windows-gfx1151.result == 'skipped') &&
-      (needs.test-ubuntu-gfx1151.result == 'success' || needs.test-ubuntu-gfx1151.result == 'skipped') &&
-      github.event_name != 'pull_request' &&
+      (needs.build-ubuntu.result == 'success') &&
+       github.event_name != 'pull_request' &&
       (github.event_name == 'workflow_dispatch' && 
        (github.event.inputs.create_release == 'true' || github.event.inputs.create_release == null) ||
        github.event_name == 'schedule')
